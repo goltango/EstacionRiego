@@ -13,9 +13,9 @@
 
 #include <cr_section_macros.h>
 #define LED2 22
-#define T_CORTO 5
+#define T_CORTO 20
 #define T_DISABLE 3600
-#define RELAY_RIEGO 0
+#define RELAY_RIEGO 2
 
 volatile int tickCounter=0;
 volatile int flagLed=0;

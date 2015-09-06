@@ -29,7 +29,7 @@ all: EstacionRiego.axf
 EstacionRiego.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -L"/home/goltango/workspace/LPCXpresso/CMSIS_CORE_LPC17xx/Debug" -L"/home/goltango/workspace/LPCXpresso/CMSIS_DSPLIB_CM3/lib" -Xlinker -Map="EstacionRiego.map" -Xlinker --gc-sections -mcpu=cortex-m3 -mthumb -T "EstacionRiego_Debug.ld" -o "EstacionRiego.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -nostdlib -L"/home/goltango/workspace/workspaceLPCXpresso/CMSIS_CORE_LPC17xx/Debug" -L"/home/goltango/workspace/workspaceLPCXpresso/CMSIS_DSPLIB_CM3/lib" -Xlinker -Map="EstacionRiego.map" -Xlinker --gc-sections -mcpu=cortex-m3 -mthumb -T "EstacionRiego_Debug.ld" -o "EstacionRiego.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
